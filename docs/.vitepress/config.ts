@@ -33,9 +33,11 @@ export default defineConfig({
 
   // 关闭 markdown-it-attrs：手册中大量矩阵示例含花括号（如 {10; 20}），
   // 否则会被当成属性语法 {attr} 而破坏表格/正文。
-  // html:false 让正文中偶发的 < > 一律转义，避免被当成 HTML 标签。
+  // 注意：html 必须保持 true，否则 <PdfViewer/>、<ResourceLinks/> 等
+  // Vue 组件会被 markdown-it 转义成纯文本而不渲染。手册正文经转换后
+  // 已无裸 <tag> 形式（grep 验证 0 处），故开放 html 不会破坏手册。
   markdown: {
-    html: false,
+    html: true,
     attrs: { disable: true },
   },
 
