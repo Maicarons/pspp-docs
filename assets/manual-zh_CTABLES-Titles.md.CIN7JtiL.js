@@ -1,0 +1,5 @@
+import{_ as t,o as a,c as o,a2 as d}from"./chunks/framework.Bg-Zxr5O.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/CTABLES-Titles.md","filePath":"manual-zh/CTABLES-Titles.md","lastUpdated":1785684581000}'),p={name:"manual-zh/CTABLES-Titles.md"};function c(n,e,r,s,_,T){return a(),o("div",null,[...e[0]||(e[0]=[d(`<h4 id="_15-7-6-标题" tabindex="-1">15.7.6 标题 <a class="header-anchor" href="#_15-7-6-标题" aria-label="Permalink to &quot;15.7.6 标题&quot;">​</a></h4><pre><code>/TITLES
+    [TITLE=_string_ …]
+    [CAPTION=_string_ …]
+    [CORNER=_string_ …]
+</code></pre><p><code>TITLES</code> 子命令为前一个 <code>TABLE</code> 子命令的表输出设置标题、说明文字和角点文字。每种文字均可指定任意数量的字符串，每个字符串在输出中单独占一行。标题显示在表的上方，说明文字在表的下方，角点文字显示在表的左上角。默认情况下，标题为“Custom Tables”，说明文字和角点文字为空。在某些表输出样式下，角点文字不显示。</p><p>本子命令提供的字符串可包含以下类似宏的关键字，PSPP 在运行该命令时进行替换：</p><p><code>)DATE</code></p><p>当前日期，例如 MM/DD/YY。格式取决于区域设置。</p><p><code>)TIME</code></p><p>当前时间，例如 HH:MM:SS。格式取决于区域设置。</p><p><code>)TABLE</code></p><p>在 <code>TABLE</code> 命令上指定的表达式。省略汇总与测量级别说明，并使用变量标签代替变量名。</p>`,10)])])}const E=t(p,[["render",c]]);export{l as __pageData,E as default};

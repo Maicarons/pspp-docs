@@ -1,0 +1,4 @@
+import{_ as n,o as l,c as r,j as e,a}from"./chunks/framework.Bg-Zxr5O.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/SUBTITLE.md","filePath":"manual-zh/SUBTITLE.md","lastUpdated":1785684581000}'),s={name:"manual-zh/SUBTITLE.md"};function o(i,t,d,T,c,u){return l(),r("div",null,[...t[0]||(t[0]=[e("h3",{id:"_17-22-subtitle",tabindex:"-1"},[a("17.22 SUBTITLE "),e("a",{class:"header-anchor",href:"#_17-22-subtitle","aria-label":'Permalink to "17.22 SUBTITLE"'},"​")],-1),e("pre",null,[e("code",null,`SUBTITLE ’subtitle_string’.
+  or
+SUBTITLE subtitle_string.
+`)],-1),e("p",null,[e("code",null,"SUBTITLE"),a(" 为特定的 PSPP 运行提供副标题。如果输出设备启用了页眉，该副标题会显示在每页输出顶部、标题下方的位置。")],-1),e("p",null,"将副标题指定为带引号的字符串。不需要引号的替代语法现已废弃。如果使用该语法，副标题会被转换为全大写。",-1)])])}const _=n(s,[["render",o]]);export{m as __pageData,_ as default};

@@ -1,0 +1,6 @@
+import{_ as e,o as a,c as o,a2 as r}from"./chunks/framework.Bg-Zxr5O.js";const E=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/CTABLES-Computed-Categories.md","filePath":"manual-zh/CTABLES-Computed-Categories.md","lastUpdated":1785684581000}'),d={name:"manual-zh/CTABLES-Computed-Categories.md"};function _(s,t,p,i,c,m){return a(),o("div",null,[...t[0]||(t[0]=[r(`<h4 id="_15-7-10-计算类别" tabindex="-1">15.7.10 计算类别 <a class="header-anchor" href="#_15-7-10-计算类别" aria-label="Permalink to &quot;15.7.10 计算类别&quot;">​</a></h4><pre><code>/PCOMPUTE &amp;_postcompute_ =EXPR(_expression_)
+/PPROPERTIES &amp;_postcompute_ …
+    [LABEL=_string_]
+    [FORMAT=[_summary_ _format_]…]
+    [HIDESOURCECATS={NO _|_ YES}
+</code></pre><p><em>Computed categories</em>（计算类别），又称 <em>postcomputes</em>（后计算），是使用该数据所得类别进行算术运算而创建的类别。<code>PCOMPUTE</code> 子命令创建一个后计算，随后可用于显式类别列表中的 <code>CATEGORIES</code>（参见 <a href="./CTABLES-Explicit-Categories#CTABLES-Explicit-Category-List">CTABLES Explicit Category List</a>）。可选地，<code>PPROPERTIES</code> 可细化后计算的显示方式。以下各节提供详细信息。</p><table tabindex="0"><thead><tr><th>• PCOMPUTE</th><th></th><th></th></tr></thead><tbody><tr><td>• PPROPERTIES</td><td></td><td></td></tr></tbody></table>`,4)])])}const C=e(d,[["render",_]]);export{E as __pageData,C as default};

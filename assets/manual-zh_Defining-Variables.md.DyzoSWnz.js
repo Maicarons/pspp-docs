@@ -1,0 +1,9 @@
+import{_ as t,o as e,c as n,a2 as i}from"./chunks/framework.Bg-Zxr5O.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/Defining-Variables.md","filePath":"manual-zh/Defining-Variables.md","lastUpdated":1785684581000}'),r={name:"manual-zh/Defining-Variables.md"};function o(l,a,s,d,P,g){return e(),n("div",null,[...a[0]||(a[0]=[i(`<h4 id="_5-1-1-定义变量" tabindex="-1">5.1.1 定义变量 <a class="header-anchor" href="#_5-1-1-定义变量" aria-label="Permalink to &quot;5.1.1 定义变量&quot;">​</a></h4><p>变量有两种基本类型，<em>即</em>：<em>数值型_和_字符串型</em>。像年龄、身高和满意度这样的变量是数值型的，而 name 是字符串变量。字符串变量最好保留给辅助人工观察的说明性数据。不过，它们也可用于名义型或分类型数据。</p><p>以下示例定义了两个变量 <strong>forename</strong> 和 <strong>height</strong>，并通过手动输入将数据读入其中：</p><pre><code>PSPP&gt; data list list /forename (A12) height.
+PSPP&gt; begin data.
+data&gt; Ahmed 188
+data&gt; Bertram 167
+data&gt; Catherine 134.231
+data&gt; David 109.1
+data&gt; end data
+PSPP&gt;
+</code></pre><p>关于此示例有几点需要注意。</p><ul><li>‘data list list’这两个词是 <code>DATA LIST</code> 命令的一个示例。参见 <a href="./DATA-LIST">DATA LIST</a>。它告诉 PSPP 准备读取数据。单词‘list’有意出现了两次。第一次出现是 <code>DATA LIST</code> 调用的一部分，而第二次告诉 PSPP 数据应作为每个记录一行的自由格式数据读取。</li><li>‘/’字符很重要。它标志着您希望定义的变量列表的开始。</li><li>文本‘forename’是第一个变量的名称，而‘(A12)’表示变量 <strong>forename</strong> 是一个字符串变量，其最大长度为 12 字节。第二个变量的名称由文本‘height’指定。由于没有给出格式，该变量使用默认格式。通常默认格式期望数值数据，应按操作系统的区域设置输入。因此，该示例对于英文区域设置以及使用句点（‘.’）作为小数分隔符的其他区域设置是正确的。但是，如果您使用的系统区域设置使用逗号（‘,’）作为小数分隔符，那么在后续各行中应将‘.’替换为‘,’。或者，您可以通过在单词‘height’之后附加文本‘DOT8.3’，显式告诉 PSPP 该 <strong>height</strong> 变量使用句点作为小数分隔符来读取。有关数据格式的更多信息，参见 <a href="./Input-and-Output-Formats">输入与输出格式</a>。</li><li>通常，PSPP 在期望命令时显示提示符 PSPP&gt;。但是，当它期望数据时，提示符变为 data&gt;，以便您知道要输入数据而非命令。</li><li>每个命令的末尾都有一个终止用的‘.’，它告诉 PSPP 已遇到命令的结束。在期望数据时（<em>即</em> 当 data&gt; 提示符当前有效时）不应输入‘.’，因为它只适用于终止命令。</li></ul>`,6)])])}const h=t(r,[["render",o]]);export{_ as __pageData,h as default};

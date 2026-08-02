@@ -1,0 +1,5 @@
+import{_ as a,o,c as A,a2 as d}from"./chunks/framework.Bg-Zxr5O.js";const N=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/BEGIN-DATA.md","filePath":"manual-zh/BEGIN-DATA.md","lastUpdated":1785684581000}'),c={name:"manual-zh/BEGIN-DATA.md"};function t(r,e,n,T,D,_){return o(),A("div",null,[...e[0]||(e[0]=[d(`<h3 id="_8-1-begin-data" tabindex="-1">8.1 BEGIN DATA <a class="header-anchor" href="#_8-1-begin-data" aria-label="Permalink to &quot;8.1 BEGIN DATA&quot;">​</a></h3><pre><code>BEGIN DATA.
+…
+END DATA.
+</code></pre><p><code>BEGIN DATA</code> 和 <code>END DATA</code> 可用于在 PSPP 语法文件中嵌入原始 ASCII 数据。在 <code>BEGIN DATA</code> 之前必须先使用 <code>DATA LIST</code> 或其他输入过程（参见 <a href="./DATA-LIST">DATA LIST</a>）。<code>BEGIN DATA</code> 和 <code>END DATA</code> 必须成对使用。<code>END DATA</code> 必须单独占一行，行首不能有空白，且 <code>END</code> 与 <code>DATA</code> 之间只能有一个空格，如下所示：</p><pre><code>END DATA.
+</code></pre>`,4)])])}const p=a(c,[["render",t]]);export{N as __pageData,p as default};

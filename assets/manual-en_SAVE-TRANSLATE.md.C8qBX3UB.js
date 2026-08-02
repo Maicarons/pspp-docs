@@ -1,0 +1,14 @@
+import{_ as a,o as t,c as o,a2 as s}from"./chunks/framework.Bg-Zxr5O.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/SAVE-TRANSLATE.md","filePath":"manual-en/SAVE-TRANSLATE.md","lastUpdated":1785684581000}'),n={name:"manual-en/SAVE-TRANSLATE.md"};function d(i,e,r,c,l,E){return t(),o("div",null,[...e[0]||(e[0]=[s(`<h3 id="_9-8-save-translate" tabindex="-1">9.8 SAVE TRANSLATE <a class="header-anchor" href="#_9-8-save-translate" aria-label="Permalink to &quot;9.8 SAVE TRANSLATE&quot;">​</a></h3><pre><code>SAVE TRANSLATE
+        /OUTFILE={’file_name’,file_handle}
+        /TYPE={CSV,TAB}
+        [/REPLACE]
+        [/MISSING={IGNORE,RECODE}]
+
+        [/DROP=var_list]
+        [/KEEP=var_list]
+        [/RENAME=(src_names=target_names)…]
+        [/UNSELECTED={RETAIN,DELETE}]
+        [/MAP]
+
+        …additional subcommands depending on TYPE…
+</code></pre><p>The <code>SAVE TRANSLATE</code> command is used to save data into various formats understood by other applications.</p><p>The <code>OUTFILE</code> and <code>TYPE</code> subcommands are mandatory. <code>OUTFILE</code> specifies the file to be written, as a string file name or a file handle (see <a href="./File-Handles">File Handles</a>). <code>TYPE</code> determines the type of the file or source to read. It must be one of the following:</p><p>CSV</p><p>Comma-separated value format,</p><p>TAB</p><p>Tab-delimited format.</p><p>By default, <code>SAVE TRANSLATE</code> does not overwrite an existing file. Use <code>REPLACE</code> to force an existing file to be overwritten.</p><p>With MISSING=IGNORE, the default, <code>SAVE TRANSLATE</code> treats user-missing values as if they were not missing. Specify MISSING=RECODE to output numeric user-missing values like system-missing values and string user-missing values as all spaces.</p><p>By default, all the variables in the active dataset dictionary are saved to the system file, but <code>DROP</code> or <code>KEEP</code> can select a subset of variable to save. The <code>RENAME</code> subcommand can also be used to change the names under which variables are saved; because they are used only in the output, these names do not have to conform to the usual PSPP variable naming rules. <code>UNSELECTED</code> determines whether cases filtered out by the <code>FILTER</code> command are written to the output file. These subcommands have the same syntax and meaning as on the <code>SAVE</code> command (see <a href="./SAVE">SAVE</a>).</p><p>Each supported file type has additional subcommands, explained in separate sections below.</p><p><code>SAVE TRANSLATE</code> causes the data to be read. It is a procedure.</p><table tabindex="0"><thead><tr><th>• SAVE TRANSLATE /TYPE=CSV and TYPE=TAB</th><th></th><th></th></tr></thead></table>`,14)])])}const p=a(n,[["render",d]]);export{h as __pageData,p as default};

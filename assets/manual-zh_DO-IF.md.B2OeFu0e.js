@@ -1,0 +1,9 @@
+import{_ as o,o as a,c as d,a2 as c}from"./chunks/framework.Bg-Zxr5O.js";const E=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/DO-IF.md","filePath":"manual-zh/DO-IF.md","lastUpdated":1785684581000}'),n={name:"manual-zh/DO-IF.md"};function t(r,e,i,s,_,p){return a(),d("div",null,[...e[0]||(e[0]=[c(`<h3 id="_14-3-do-if" tabindex="-1">14.3 DO IF <a class="header-anchor" href="#_14-3-do-if" aria-label="Permalink to &quot;14.3 DO IF&quot;">​</a></h3><pre><code>DO IF condition.
+        …
+[ELSE IF condition.
+        …
+]…
+[ELSE.
+        …]
+END IF.
+</code></pre><p><code>DO IF</code> 根据用户指定的条件，执行若干组变化中的一组。</p><p>如果指定的布尔表达式求值为真，则执行 <code>DO IF</code> 之后的代码块。如果求值为缺失，则任何代码块都不执行。如果为假，则依次测试第一个 <code>ELSE IF</code> 上的布尔表达式（如果存在），并应用相同规则。如果所有表达式都求值为假，则执行 <code>ELSE</code> 代码块（如果存在）。</p><p>当 <code>DO IF</code> 或 <code>ELSE IF</code> 在 <code>TEMPORARY</code> 之后指定时（参见 <a href="./TEMPORARY">TEMPORARY</a>），不能使用 <code>LAG</code> 函数（参见 <a href="./Miscellaneous-Functions#LAG">LAG</a>）。</p>`,5)])])}const I=o(n,[["render",t]]);export{E as __pageData,I as default};

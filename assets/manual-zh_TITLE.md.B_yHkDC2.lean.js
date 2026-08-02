@@ -1,0 +1,4 @@
+import{_ as n,o as l,c as r,j as e,a}from"./chunks/framework.Bg-Zxr5O.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/TITLE.md","filePath":"manual-zh/TITLE.md","lastUpdated":1785684581000}'),o={name:"manual-zh/TITLE.md"};function s(i,t,d,T,c,p){return l(),r("div",null,[...t[0]||(t[0]=[e("h3",{id:"_17-23-title",tabindex:"-1"},[a("17.23 TITLE "),e("a",{class:"header-anchor",href:"#_17-23-title","aria-label":'Permalink to "17.23 TITLE"'},"​")],-1),e("pre",null,[e("code",null,`TITLE ’title_string’.
+  or
+TITLE title_string.
+`)],-1),e("p",null,[e("code",null,"TITLE"),a(" 为一次特定的 PSPP 运行提供标题。如果输出设备启用了页眉，该标题会出现在每页输出的顶部。")],-1),e("p",null,"将标题指定为带引号的字符串。不需要引号的另一种语法现已废弃。若使用该语法，标题会被转换为全大写。",-1)])])}const _=n(o,[["render",s]]);export{u as __pageData,_ as default};

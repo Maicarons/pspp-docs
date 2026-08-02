@@ -1,0 +1,4 @@
+import{_ as a,o as t,c as E,a2 as n}from"./chunks/framework.Bg-Zxr5O.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/PRESERVE-and-RESTORE.md","filePath":"manual-en/PRESERVE-and-RESTORE.md","lastUpdated":1785684581000}'),o={name:"manual-en/PRESERVE-and-RESTORE.md"};function d(r,e,s,R,c,S){return t(),E("div",null,[...e[0]||(e[0]=[n(`<h3 id="_17-19-preserve-and-restore" tabindex="-1">17.19 PRESERVE and RESTORE <a class="header-anchor" href="#_17-19-preserve-and-restore" aria-label="Permalink to &quot;17.19 PRESERVE and RESTORE&quot;">​</a></h3><pre><code>PRESERVE.
+…
+RESTORE.
+</code></pre><p><code>PRESERVE</code> saves all of the settings that <code>SET</code> (see <a href="./SET">SET</a>) can adjust. A later <code>RESTORE</code> command restores those settings.</p><p><code>PRESERVE</code> can be nested up to five levels deep.</p>`,4)])])}const p=a(o,[["render",d]]);export{l as __pageData,p as default};

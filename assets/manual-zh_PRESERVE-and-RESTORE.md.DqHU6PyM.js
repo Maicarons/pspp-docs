@@ -1,0 +1,4 @@
+import{_ as E,o as a,c as t,a2 as r}from"./chunks/framework.Bg-Zxr5O.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/PRESERVE-and-RESTORE.md","filePath":"manual-zh/PRESERVE-and-RESTORE.md","lastUpdated":1785684581000}'),R={name:"manual-zh/PRESERVE-and-RESTORE.md"};function o(d,e,n,c,S,s){return a(),t("div",null,[...e[0]||(e[0]=[r(`<h3 id="_17-19-preserve-和-restore" tabindex="-1">17.19 PRESERVE 和 RESTORE <a class="header-anchor" href="#_17-19-preserve-和-restore" aria-label="Permalink to &quot;17.19 PRESERVE 和 RESTORE&quot;">​</a></h3><pre><code>PRESERVE.
+…
+RESTORE.
+</code></pre><p><code>PRESERVE</code> 保存 <code>SET</code>（参见 <a href="./SET">SET</a>）能够调整的所有设置。后续的 <code>RESTORE</code> 命令恢复这些设置。</p><p><code>PRESERVE</code> 最多可嵌套五层。</p>`,4)])])}const l=E(R,[["render",o]]);export{p as __pageData,l as default};

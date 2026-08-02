@@ -1,0 +1,16 @@
+import{_ as o,o as a,c as t,a2 as s}from"./chunks/framework.Bg-Zxr5O.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/MATCH-FILES.md","filePath":"manual-en/MATCH-FILES.md","lastUpdated":1785684581000}'),n={name:"manual-en/MATCH-FILES.md"};function i(c,e,d,r,l,m){return a(),t("div",null,[...e[0]||(e[0]=[s(`<h3 id="_10-3-match-files" tabindex="-1">10.3 MATCH FILES <a class="header-anchor" href="#_10-3-match-files" aria-label="Permalink to &quot;10.3 MATCH FILES&quot;">​</a></h3><pre><code>MATCH FILES
+
+Per input file:
+        /{FILE,TABLE}={*,’file_name’}
+        [/RENAME=(src_names=target_names)…]
+        [/IN=var_name]
+        [/SORT]
+
+Once per command:
+        /BY var_list[({D|A}] [var_list[({D|A})]…]
+        [/DROP=var_list]
+        [/KEEP=var_list]
+        [/FIRST=var_name]
+        [/LAST=var_name]
+        [/MAP]
+</code></pre><p><code>MATCH FILES</code> merges sets of corresponding cases in multiple input files into single cases in the output, combining their data.</p><p><code>MATCH FILES</code> shares the bulk of its syntax with other PSPP commands for combining multiple data files. See <a href="./Combining-Files-Common-Syntax">Combining Files Common Syntax</a>, above, for an explanation of this common syntax.</p><p>How <code>MATCH FILES</code> matches up cases from the input files depends on whether <code>BY</code> is specified:</p><ul><li>If <code>BY</code> is not used, <code>MATCH FILES</code> combines the first case from each input file to produce the first output case, then the second case from each input file for the second output case, and so on. If some input files have fewer cases than others, then the shorter files do not contribute to cases output after their input has been exhausted.</li><li>If <code>BY</code> is used, <code>MATCH FILES</code> combines cases from each input file that have identical values for the <code>BY</code> variables.</li></ul><p>When <code>BY</code> is used, <code>TABLE</code> subcommands may be used to introduce <em>table lookup file</em>. <code>TABLE</code> has same syntax as <code>FILE</code>, and the <code>RENAME</code>, <code>IN</code>, and <code>SORT</code> subcommands may follow a <code>TABLE</code> in the same way as <code>FILE</code>. Regardless of the number of <code>TABLE</code>s, at least one <code>FILE</code> must specified. Table lookup files are treated in the same way as other input files for most purposes and, in particular, table lookup files must be sorted on the <code>BY</code> variables or the <code>SORT</code> subcommand must be specified for that <code>TABLE</code>.</p><p>Cases in table lookup files are not consumed after they have been used once. This means that data in table lookup files can correspond to any number of cases in <code>FILE</code> input files. Table lookup files are analogous to lookup tables in traditional relational database systems.</p><p>If a table lookup file contains more than one case with a given set of <code>BY</code> variables, only the first case is used.</p><p>When <code>MATCH FILES</code> creates an output case, variables that are only in files that are not present for the current case are set to the system-missing value for numeric variables or spaces for string variables.</p>`,10)])])}const f=o(n,[["render",i]]);export{p as __pageData,f as default};

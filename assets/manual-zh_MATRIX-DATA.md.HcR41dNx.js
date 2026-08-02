@@ -1,0 +1,16 @@
+import{_ as o,o as d,c as A,a2 as c}from"./chunks/framework.Bg-Zxr5O.js";const E=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/MATRIX-DATA.md","filePath":"manual-zh/MATRIX-DATA.md","lastUpdated":1785684581000}'),a={name:"manual-zh/MATRIX-DATA.md"};function t(T,e,R,p,n,I){return d(),A("div",null,[...e[0]||(e[0]=[c(`<h3 id="_16-2-matrix-data" tabindex="-1">16.2 MATRIX DATA <a class="header-anchor" href="#_16-2-matrix-data" aria-label="Permalink to &quot;16.2 MATRIX DATA&quot;">​</a></h3><pre><code>MATRIX DATA
+        VARIABLES=variables
+        [FILE={’file_name’ | INLINE}
+        [/FORMAT=[{LIST | FREE}]
+                 [{UPPER | LOWER | FULL}]
+                 [{DIAGONAL | NODIAGONAL}]]
+        [/SPLIT=split_vars]
+        [/FACTORS=factor_vars]
+        [/N=n]
+
+The following subcommands are only needed when ROWTYPE_ is not
+specified on the VARIABLES subcommand:
+        [/CONTENTS={CORR,COUNT,COV,DFE,MAT,MEAN,MSE,
+                    N_MATRIX,N|N_VECTOR,N_SCALAR,PROX,SD|STDDEV}]
+        [/CELLS=n_cells]
+</code></pre><p><code>MATRIX DATA</code> 命令将文本格式的矩阵和向量转换为矩阵文件格式（参见 <a href="./Matrix-Files">Matrix Files</a>），以供读取矩阵的过程使用。它读取文本文件或内联数据，并输出到活动文件，替换活动数据集中已有的任何数据。然后，矩阵文件可由其他命令直接从活动文件使用，或者可以使用 <code>SAVE</code> 命令写入 .sav 文件。</p><p><code>MATRIX DATA</code> 读取的文本数据可以由空格或逗号分隔。除紧接在‘d’或‘e’之后的情况外，加号或减号也会开始一个新值。可选地，值可以用单引号或双引号括起来。</p><p><code>MATRIX DATA</code> 可以读取矩阵文件中支持的矩阵和向量数据类型（参见 <a href="./Matrix-Files#Matrix-File-Row-Types">Matrix File Row Types</a>）。</p><p><code>FILE</code> 子命令指定命令输入的来源。要从文本文件读取输入，请用引号指定其名称。要以内联方式提供输入，省略 <code>FILE</code> 或指定 <code>INLINE</code>。内联数据必须紧接在 <code>MATRIX DATA</code> 之后，位于 <code>BEGIN DATA</code> 内部（参见 <a href="./BEGIN-DATA">BEGIN DATA</a>）。</p><p><code>VARIABLES</code> 是唯一必需的子命令。它按出现顺序命名每个输入记录中存在的变量。（如有需要，<code>MATRIX DATA</code> 会对其生成的矩阵文件中的变量重新排序，以适应矩阵文件格式。）变量列表必须包含拆分变量和因子变量（如果它们存在于数据中），以及构成矩阵行和列的连续变量。它也可以包含一个名为 <code>ROWTYPE_</code> 的特殊变量。</p><p>矩阵数据可以包含拆分变量或因子变量，或两者皆有。如有拆分变量，列在 <code>SPLIT</code> 子命令上；如有因子变量，列在 <code>FACTORS</code> 子命令上。拆分变量和因子变量必须为数值型。拆分变量和因子变量也必须列在 <code>VARIABLES</code> 上，有一个例外：如果 <code>VARIABLES</code> 不包含 <code>ROWTYPE_</code>，则 <code>SPLIT</code> 可以命名一个不在 <code>VARIABLES</code> 中的变量（参见 <a href="./MATRIX-DATA-without-ROWTYPE_005f#MATRIX-DATA-Example-8">MATRIX DATA Example 8</a>）。</p><p><code>FORMAT</code> 子命令接受用于描述输入数据格式的设置：</p><p><code>LIST</code>（默认） <code>FREE</code></p><p>LIST 要求每一行从一个新输入行的开头开始。FREE 允许行从一行的中间开始。两种设置都允许单个行跨多行输入延续。</p><p><code>LOWER</code>（默认） <code>UPPER</code><code>FULL</code></p><p>使用 LOWER 时，仅从输入数据读取下三角，上三角沿主对角线镜像。UPPER 对上三角的行为类似。FULL 读取整个矩阵。</p><p><code>DIAGONAL</code>（默认） <code>NODIAGONAL</code></p><p>使用 DIAGONAL 时，从输入数据读取主对角线。使用 NODIAGONAL（与 FULL 不兼容）时，不从输入数据读取主对角线，而是对相关矩阵设为 1，对其他矩阵设为系统缺失值。</p><p><code>N</code> 子命令是一种指定总体大小的方式。它等价于为每个拆分文件指定一个具有该指定值的 <code>N</code> 向量。</p><p><code>MATRIX DATA</code> 支持两种不同的方式来指示数据中所存在的矩阵和向量种类，取决于 <code>VARIABLES</code> 中是否存在名为 <code>ROWTYPE_</code> 的特殊变量。以下各小节分别解释每种情况下 <code>MATRIX DATA</code> 的语法和行为。</p><table tabindex="0"><thead><tr><th>• With ROWTYPE_</th><th></th><th></th></tr></thead><tbody><tr><td>• Without ROWTYPE_</td><td></td><td></td></tr></tbody></table>`,18)])])}const i=o(a,[["render",t]]);export{E as __pageData,i as default};

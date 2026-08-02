@@ -1,0 +1,16 @@
+import{_ as a,o as t,c as o,a2 as r}from"./chunks/framework.Bg-Zxr5O.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/Matrix-WRITE-Command.md","filePath":"manual-en/Matrix-WRITE-Command.md","lastUpdated":1785684581000}'),i={name:"manual-en/Matrix-WRITE-Command.md"};function n(d,e,c,m,s,l){return t(),o("div",null,[...e[0]||(e[0]=[r(`<h4 id="_16-4-8-2-the-write-command" tabindex="-1">16.4.8.2 The <code>WRITE</code> Command <a class="header-anchor" href="#_16-4-8-2-the-write-command" aria-label="Permalink to &quot;16.4.8.2 The \`WRITE\` Command&quot;">​</a></h4><pre><code>WRITE _expression_
+      [/OUTFILE=_file_]
+      /FIELD=_first_ TO _last_ [BY _width_]
+      [/FORMAT=_format_]
+      [/MODE={RECTANGULAR _|_ TRIANGULAR}]
+      [/HOLD].
+</code></pre><p>The <code>WRITE</code> command evaluates <em>expression</em> and writes its value to a text file in a specified format. Write the expression to evaluate just after the command name.</p><p>The <code>OUTFILE</code> subcommand is required in the first <code>WRITE</code> command that appears within <code>MATRIX</code>. It specifies the text file to be written, either as a file name in quotes or a file handle previously declared on <code>FILE HANDLE</code> (see <a href="./FILE-HANDLE">FILE HANDLE</a>). Later <code>WRITE</code> commands (in syntax order) use the previous referenced file if <code>FILE</code> is omitted.</p><p>The <code>FIELD</code> and <code>FORMAT</code> subcommands specify how output lines are formed. <code>FIELD</code> is required, but <code>FORMAT</code> is optional. See <a href="./Matrix-READ-and-WRITE-Commands">Matrix READ and WRITE Commands</a>, for details.</p><p>By default, or with <code>MODE=RECTANGULAR</code>, the command writes an entry for every row and column. With <code>MODE=TRIANGULAR</code>, the command writes only the entries on and below the matrix’s main diagonal. Entries above the diagonal are not written. Only square matrices may be written with <code>MODE=TRIANGULAR</code>.</p><p>Ordinarily, each <code>WRITE</code> command writes complete lines to the output file. With <code>HOLD</code>, the final line written by <code>WRITE</code> will be held back for the next <code>WRITE</code> command to augment. This can be useful to write more than one matrix on a single output line.</p><h4 id="example-1-basic-usage" tabindex="-1">Example 1: Basic Usage <a class="header-anchor" href="#example-1-basic-usage" aria-label="Permalink to &quot;Example 1: Basic Usage&quot;">​</a></h4><p>This matrix program:</p><pre><code>WRITE {1, 2; 3, 4} /OUTFILE=&#39;matrix.txt&#39; /FIELD=1 TO 80.
+</code></pre><p>writes the following to matrix.txt:</p><pre><code> 1 2
+ 3 4
+</code></pre><h4 id="example-2-triangular-matrix" tabindex="-1">Example 2: Triangular Matrix <a class="header-anchor" href="#example-2-triangular-matrix" aria-label="Permalink to &quot;Example 2: Triangular Matrix&quot;">​</a></h4><p>This matrix program:</p><pre><code>WRITE MAGIC(5) /OUTFILE=&#39;matrix.txt&#39; /FIELD=1 TO 80 BY 5 /MODE=TRIANGULAR.
+</code></pre><p>writes the following to matrix.txt:</p><pre><code>    17
+    23    5
+     4    6   13
+    10   12   19   21
+    11   18   25    2    9
+</code></pre>`,17)])])}const T=a(i,[["render",n]]);export{h as __pageData,T as default};

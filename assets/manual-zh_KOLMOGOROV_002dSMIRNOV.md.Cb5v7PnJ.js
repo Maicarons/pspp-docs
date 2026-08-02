@@ -1,0 +1,7 @@
+import{_ as e,o as a,c as O,a2 as r}from"./chunks/framework.Bg-Zxr5O.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/KOLMOGOROV_002dSMIRNOV.md","filePath":"manual-zh/KOLMOGOROV_002dSMIRNOV.md","lastUpdated":1785684581000}'),n={name:"manual-zh/KOLMOGOROV_002dSMIRNOV.md"};function m(t,o,d,c,s,l){return a(),O("div",null,[...o[0]||(o[0]=[r(`<h4 id="_15-12-6-kolmogorov-smirnov-检验" tabindex="-1">15.12.6 Kolmogorov-Smirnov 检验 <a class="header-anchor" href="#_15-12-6-kolmogorov-smirnov-检验" aria-label="Permalink to &quot;15.12.6 Kolmogorov-Smirnov 检验&quot;">​</a></h4><pre><code>     [ /KOLMOGOROV-SMIRNOV ({NORMAL [mu, sigma], UNIFORM [min, max], POISSON [lambda], EXPONENTIAL [scale] }) = var_list ]
+</code></pre><p>单样本 Kolmogorov-Smirnov 子命令用于检验数据集是否抽取自特定分布。支持四种分布，<em>即：</em> 正态、均匀、泊松和指数。</p><p>理想情况下，您应提供要检验数据所针对的分布的参数。例如，对于正态分布，应给出均值（mu）和标准差（sigma）；对于均匀分布，应提供最小值（min）和最大值（max）。但是，如果省略参数，则会从数据中推算。推算参数会降低检验的功效，因此应尽可能避免。</p><p>在以下示例中，检验两个变量 score 和 age，看它们是否服从均值为 3.5、标准差为 2.0 的正态分布。</p><pre><code>  NPAR TESTS
+        /KOLMOGOROV-SMIRNOV (normal 3.5 2.0) = score age.
+</code></pre><p>如果需要对变量检验不同的分布，则必须使用单独的子命令。例如，以下语法将 score 检验为均值 3.5、标准差 2.0 的正态分布，同时将 age 检验为均值 40、标准差 1.5 的正态分布。</p><pre><code>  NPAR TESTS
+        /KOLMOGOROV-SMIRNOV (normal 3.5 2.0) = score
+        /KOLMOGOROV-SMIRNOV (normal 40 1.5) =  age.
+</code></pre><p>可以使用缩写子命令 <code>K-S</code> 代替 <code>KOLMOGOROV-SMIRNOV</code>。</p>`,9)])])}const i=e(n,[["render",m]]);export{_ as __pageData,i as default};

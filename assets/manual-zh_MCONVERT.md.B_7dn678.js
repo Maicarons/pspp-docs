@@ -1,0 +1,6 @@
+import{_ as o,o as a,c,a2 as d}from"./chunks/framework.Bg-Zxr5O.js";const R=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/MCONVERT.md","filePath":"manual-zh/MCONVERT.md","lastUpdated":1785684581000}'),t={name:"manual-zh/MCONVERT.md"};function n(r,e,T,_,p,s){return a(),c("div",null,[...e[0]||(e[0]=[d(`<h3 id="_16-3-mconvert" tabindex="-1">16.3 MCONVERT <a class="header-anchor" href="#_16-3-mconvert" aria-label="Permalink to &quot;16.3 MCONVERT&quot;">​</a></h3><pre><code>MCONVERT
+    [[MATRIX=]
+     [IN({‘*’|’file’})]
+     [OUT({‘*’|’file’})]]
+    [/{REPLACE,APPEND}].
+</code></pre><p><code>MCONVERT</code> 命令将矩阵数据从相关矩阵和标准差向量转换为协方差矩阵，或反之。</p><p>默认情况下，<code>MCONVERT</code> 既读取也写入活动文件。使用 <code>MATRIX</code> 子命令指定其他文件。要读取矩阵文件，在 <code>IN</code> 之后的括号内指定其名称。要写入矩阵文件，在 <code>OUT</code> 之后的括号内指定其名称。使用‘*’显式指定活动文件作为输入或输出。</p><p>当 <code>MCONVERT</code> 读取输入时，默认情况下，每当遇到协方差矩阵时，它会替换为相关矩阵和标准差向量，反之亦然。指定 <code>/APPEND</code> 使 <code>MCONVERT</code> 改为在不移除现有数据的情况下添加另一种形式的数据。使用 <code>/REPLACE</code> 显式请求移除现有数据。</p><p><code>MCONVERT</code> 命令要求输入为矩阵文件。使用 <code>MATRIX DATA</code> 将文本输入转换为矩阵文件格式。详见 <a href="./MATRIX-DATA">MATRIX DATA</a>。</p>`,6)])])}const l=o(t,[["render",n]]);export{R as __pageData,l as default};

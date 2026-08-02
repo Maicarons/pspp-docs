@@ -1,0 +1,9 @@
+import{_ as o,o as t,c as n,a2 as s}from"./chunks/framework.Bg-Zxr5O.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/DO-IF.md","filePath":"manual-en/DO-IF.md","lastUpdated":1785684581000}'),a={name:"manual-en/DO-IF.md"};function i(d,e,c,r,l,f){return t(),n("div",null,[...e[0]||(e[0]=[s(`<h3 id="_14-3-do-if" tabindex="-1">14.3 DO IF <a class="header-anchor" href="#_14-3-do-if" aria-label="Permalink to &quot;14.3 DO IF&quot;">​</a></h3><pre><code>DO IF condition.
+        …
+[ELSE IF condition.
+        …
+]…
+[ELSE.
+        …]
+END IF.
+</code></pre><p><code>DO IF</code> allows one of several sets of transformations to be executed, depending on user-specified conditions.</p><p>If the specified boolean expression evaluates as true, then the block of code following <code>DO IF</code> is executed. If it evaluates as missing, then none of the code blocks is executed. If it is false, then the boolean expression on the first <code>ELSE IF</code>, if present, is tested in turn, with the same rules applied. If all expressions evaluate to false, then the <code>ELSE</code> code block is executed, if it is present.</p><p>When <code>DO IF</code> or <code>ELSE IF</code> is specified following <code>TEMPORARY</code> (see <a href="./TEMPORARY">TEMPORARY</a>), the <code>LAG</code> function may not be used (see <a href="./Miscellaneous-Functions#LAG">LAG</a>).</p>`,5)])])}const h=o(a,[["render",i]]);export{u as __pageData,h as default};

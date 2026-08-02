@@ -1,0 +1,9 @@
+import{_ as a,o,c as r,a2 as c}from"./chunks/framework.Bg-Zxr5O.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/GLM.md","filePath":"manual-zh/GLM.md","lastUpdated":1785684581000}'),p={name:"manual-zh/GLM.md"};function t(d,e,_,n,s,g){return o(),r("div",null,[...e[0]||(e[0]=[c(`<h3 id="_15-9-glm" tabindex="-1">15.9 GLM <a class="header-anchor" href="#_15-9-glm" aria-label="Permalink to &quot;15.9 GLM&quot;">​</a></h3><pre><code>GLM dependent_vars BY fixed_factors
+     [/METHOD = SSTYPE(type)]
+     [/DESIGN = interaction_0 [interaction_1 [... interaction_n]]]
+     [/INTERCEPT = {INCLUDE|EXCLUDE}]
+     [/MISSING = {INCLUDE|EXCLUDE}]
+</code></pre><p><code>GLM</code> 过程可用于固定效应析因方差分析（Anova）。</p><p>dependent_vars 是要分析的变量。您可以在同一命令中分析多个变量，此时它们都应出现在 <code>BY</code> 关键字之前。</p><p>fixed_factors 列表必须是一个或多个分类变量。通常，将标量变量放入 fixed_factors 没有意义，这样做可能导致 PSPP 执行大量不必要的处理。</p><p><code>METHOD</code> 子命令用于更改生成平方和的方法。type 的可用值为 1、2 和 3。默认为 type 3。</p><p>您可以使用 <code>DESIGN</code> 子命令指定自定义设计。设计由交互列表组成，其中每个交互是用 ‘*’ 分隔的变量列表。例如命令</p><pre><code>GLM subject BY sex age_group race
+    /DESIGN = age_group sex group age_group*sex age_group*race
+</code></pre><p>指定模型 <em>subject = age_group + sex + race + age_group<em>sex + age_group</em>race</em>。如果未指定 <code>DESIGN</code> 子命令，则默认是所有固定因子的所有可能组合。也就是说</p><pre><code>GLM subject BY sex age_group race
+</code></pre><p>意味着模型 <em>subject = age_group + sex + race + age_group<em>sex + age_group</em>race + sex<em>race + age_group</em>sex*race</em>。</p><p><code>MISSING</code> 子命令决定对缺失变量的处理。如果设置为 <code>INCLUDE</code>，则出于 GLM 分析的目的，只有系统缺失值被视为缺失；用户缺失值不被视为缺失。如果设置为 <code>EXCLUDE</code>（默认值），则用户缺失值与系统缺失值一样被视为缺失。任何因变量或任何因子变量具有缺失值的个案都会被排除在分析之外。</p>`,12)])])}const i=a(p,[["render",t]]);export{m as __pageData,i as default};

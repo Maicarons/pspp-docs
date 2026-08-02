@@ -1,0 +1,7 @@
+import{_ as o,o as t,c as d,a2 as a}from"./chunks/framework.Bg-Zxr5O.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/CTABLES-Table-Formatting.md","filePath":"manual-zh/CTABLES-Table-Formatting.md","lastUpdated":1785684581000}'),c={name:"manual-zh/CTABLES-Table-Formatting.md"};function _(T,e,n,r,i,s){return t(),d("div",null,[...e[0]||(e[0]=[a(`<h4 id="_15-7-7-表格式设置" tabindex="-1">15.7.7 表格式设置 <a class="header-anchor" href="#_15-7-7-表格式设置" aria-label="Permalink to &quot;15.7.7 表格式设置&quot;">​</a></h4><pre><code>/FORMAT
+    [MINCOLWIDTH={DEFAULT _|_ _width_}]
+    [MAXCOLWIDTH={DEFAULT _|_ _width_}]
+    [UNITS={POINTS _|_ INCHES _|_ CM}]
+    [EMPTY={ZERO _|_ BLANK _|_ _string_}]
+    [MISSING=_string_]
+</code></pre><p><code>FORMAT</code> 子命令必须位于第一个 <code>TABLE</code> 子命令之前，用于控制所有输出表的格式设置。<code>FORMAT</code> 及其所有设置均为可选。</p><p>使用 <code>MINCOLWIDTH</code> 和 <code>MAXCOLWIDTH</code> 控制输出表中列的最小或最大宽度。默认使用 <code>DEFAULT</code> 时，列宽随内容变化。否则，可为其中一项或两项设置指定一个数字。若两项都指定，则 <code>MAXCOLWIDTH</code> 必须大于或等于 <code>MINCOLWIDTH</code>。默认单位（或使用 <code>UNITS=POINTS</code>）为磅（1/72 英寸），也可指定 <code>UNITS=INCHES</code> 使用英寸，或指定 <code>UNITS=CM</code> 使用厘米。PSPP 目前并不实际采用这些设置。</p><p>默认情况下，或使用 <code>EMPTY=ZERO</code> 时，零值以常规格式显示。使用 <code>EMPTY=BLANK</code> 则以空单元格代替，或使用 <code>EMPTY=&quot;_string_ &quot;</code> 使用指定的字符串。</p><p>默认情况下，缺失值显示为‘.’，与其他表相同。指定 <code>MISSING=&quot;_string_ &quot;</code> 则可改用自定义字符串。</p>`,6)])])}const S=o(c,[["render",_]]);export{p as __pageData,S as default};

@@ -1,0 +1,4 @@
+import{_ as a,o as S,c as o,a2 as t}from"./chunks/framework.Bg-Zxr5O.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-zh/PERMISSIONS.md","filePath":"manual-zh/PERMISSIONS.md","lastUpdated":1785684581000}'),r={name:"manual-zh/PERMISSIONS.md"};function n(d,e,s,c,_,I){return S(),o("div",null,[...e[0]||(e[0]=[t(`<h3 id="_17-18-permissions" tabindex="-1">17.18 PERMISSIONS <a class="header-anchor" href="#_17-18-permissions" aria-label="Permalink to &quot;17.18 PERMISSIONS&quot;">​</a></h3><pre><code>PERMISSIONS
+        FILE=’file_name’
+        /PERMISSIONS = {READONLY,WRITEABLE}.
+</code></pre><p><code>PERMISSIONS</code> 更改文件的权限。有一个必选子命令，用于指定文件应更改到的权限。如果将文件的权限设为 <code>READONLY</code>，则该文件将变为不可写，无论你自己还是系统上的其他人都无法写入。如果将权限设为 <code>WRITEABLE</code>，则该文件变为可由你写入；授予其他人的权限保持不变。如果 <code>SAFER</code>（参见 <a href="./SET">SET</a>）设置处于活动状态，则不能使用此命令。</p>`,3)])])}const l=a(r,[["render",n]]);export{i as __pageData,l as default};

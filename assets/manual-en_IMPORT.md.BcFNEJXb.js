@@ -1,0 +1,7 @@
+import{_ as a,o as t,c as o,a2 as d}from"./chunks/framework.Bg-Zxr5O.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/IMPORT.md","filePath":"manual-en/IMPORT.md","lastUpdated":1785684581000}'),n={name:"manual-en/IMPORT.md"};function r(s,e,c,i,l,p){return t(),o("div",null,[...e[0]||(e[0]=[d(`<h3 id="_9-5-import" tabindex="-1">9.5 IMPORT <a class="header-anchor" href="#_9-5-import" aria-label="Permalink to &quot;9.5 IMPORT&quot;">​</a></h3><pre><code>IMPORT
+        /FILE=’file_name’
+        /TYPE={COMM,TAPE}
+        /DROP=var_list
+        /KEEP=var_list
+        /RENAME=(src_names=target_names)…
+</code></pre><p>The <code>IMPORT</code> transformation clears the active dataset dictionary and data and replaces them with a dictionary and data from a system file or portable file.</p><p>The <code>FILE</code> subcommand, which is the only required subcommand, specifies the portable file to be read as a file name string or a file handle (see <a href="./File-Handles">File Handles</a>).</p><p>The <code>TYPE</code> subcommand is currently not used.</p><p><code>DROP</code>, <code>KEEP</code>, and <code>RENAME</code> follow the syntax used by <code>GET</code> (see <a href="./GET">GET</a>).</p><p><code>IMPORT</code> does not cause the data to be read; only the dictionary. The data is read later, when a procedure is executed.</p><p>Use of <code>IMPORT</code> to read a system file is a PSPP extension.</p>`,8)])])}const T=a(n,[["render",r]]);export{_ as __pageData,T as default};

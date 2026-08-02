@@ -1,0 +1,13 @@
+import{_ as e,o as d,c as a,a2 as s}from"./chunks/framework.Bg-Zxr5O.js";const S=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/NPAR-TESTS.md","filePath":"manual-en/NPAR-TESTS.md","lastUpdated":1785684581000}'),r={name:"manual-en/NPAR-TESTS.md"};function n(o,t,i,c,T,m){return d(),a("div",null,[...t[0]||(t[0]=[s(`<h3 id="_15-12-npar-tests" tabindex="-1">15.12 NPAR TESTS <a class="header-anchor" href="#_15-12-npar-tests" aria-label="Permalink to &quot;15.12 NPAR TESTS&quot;">​</a></h3><pre><code>NPAR TESTS
+
+     nonparametric test subcommands
+     .
+     .
+     .
+
+     [ /STATISTICS={DESCRIPTIVES} ]
+
+     [ /MISSING={ANALYSIS, LISTWISE} {INCLUDE, EXCLUDE} ]
+
+     [ /METHOD=EXACT [ TIMER [(n)] ] ]
+</code></pre><p><code>NPAR TESTS</code> performs nonparametric tests. Non parametric tests make very few assumptions about the distribution of the data. One or more tests may be specified by using the corresponding subcommand. If the <code>/STATISTICS</code> subcommand is also specified, then summary statistics are produces for each variable that is the subject of any test.</p><p>Certain tests may take a long time to execute, if an exact figure is required. Therefore, by default asymptotic approximations are used unless the subcommand <code>/METHOD=EXACT</code> is specified. Exact tests give more accurate results, but may take an unacceptably long time to perform. If the <code>TIMER</code> keyword is used, it sets a maximum time, after which the test is abandoned, and a warning message printed. The time, in minutes, should be specified in parentheses after the <code>TIMER</code> keyword. If the <code>TIMER</code> keyword is given without this figure, then a default value of 5 minutes is used.</p><table tabindex="0"><thead><tr><th>• BINOMIAL</th><th></th><th>Binomial Test</th></tr></thead><tbody><tr><td>• CHISQUARE</td><td></td><td>Chi-square Test</td></tr><tr><td>• COCHRAN</td><td></td><td>Cochran Q Test</td></tr><tr><td>• FRIEDMAN</td><td></td><td>Friedman Test</td></tr><tr><td>• KENDALL</td><td></td><td>Kendall’s W Test</td></tr><tr><td>• KOLMOGOROV-SMIRNOV</td><td></td><td>Kolmogorov Smirnov Test</td></tr><tr><td>• KRUSKAL-WALLIS</td><td></td><td>Kruskal-Wallis Test</td></tr><tr><td>• MANN-WHITNEY</td><td></td><td>Mann Whitney U Test</td></tr><tr><td>• MCNEMAR</td><td></td><td>McNemar Test</td></tr><tr><td>• MEDIAN</td><td></td><td>Median Test</td></tr><tr><td>• RUNS</td><td></td><td>Runs Test</td></tr><tr><td>• SIGN</td><td></td><td>The Sign Test</td></tr><tr><td>• WILCOXON</td><td></td><td>Wilcoxon Signed Ranks Test</td></tr></tbody></table>`,5)])])}const h=e(r,[["render",n]]);export{S as __pageData,h as default};

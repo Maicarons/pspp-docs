@@ -1,0 +1,6 @@
+import{_ as e,o as n,c as r,a2 as o}from"./chunks/framework.Bg-Zxr5O.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"manual-en/Matrix-Property-Functions.md","filePath":"manual-en/Matrix-Property-Functions.md","lastUpdated":1785684581000}'),a={name:"manual-en/Matrix-Property-Functions.md"};function i(s,t,c,p,d,u){return n(),r("div",null,[...t[0]||(t[0]=[o(`<h4 id="_16-4-2-5-matrix-property-functions" tabindex="-1">16.4.2.5 Matrix Property Functions <a class="header-anchor" href="#_16-4-2-5-matrix-property-functions" aria-label="Permalink to &quot;16.4.2.5 Matrix Property Functions&quot;">​</a></h4><p>Matrix Function: <strong>NROW</strong> <em>( M)</em> Matrix Function: <strong>NCOL</strong> <em>( M)</em></p><p>Returns the number of row or columns, respectively, in M.</p><pre><code>NROW({1, 0; -2, -3; 3, 3}) ⇒ 3
+NROW(1:5) ⇒ 1
+
+NCOL({1, 0; -2, -3; 3, 3}) ⇒ 2
+NCOL(1:5) ⇒ 5
+</code></pre><p>Matrix Function: <strong>DIAG</strong> <em>( M)</em></p><p>Returns a column vector containing a copy of M’s main diagonal. The vector’s length is the lesser of <code>NCOL(M)</code> and <code>NROW(M)</code>.</p><p><code>DIAG({1, 0; -2, -3; 3, 3}) ⇒ {1; -3}</code></p>`,7)])])}const _=e(a,[["render",i]]);export{l as __pageData,_ as default};
