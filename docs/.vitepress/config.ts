@@ -8,6 +8,7 @@ const base = process.env.VITEPRESS_BASE || '/pspp-docs/'
 
 // 入门教程章节（顺序固定）
 const tutorialSidebar = [
+  { text: '教程首页', link: '/tutorial/' },
   { text: '前言', link: '/tutorial/00-前言' },
   { text: '第一章 PSPP 概述', link: '/tutorial/01-第一章-PSPP概述' },
   { text: '第二章 安装与环境配置', link: '/tutorial/02-第二章-安装与环境配置' },
