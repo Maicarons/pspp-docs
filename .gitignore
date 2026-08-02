@@ -13,3 +13,6 @@ tools/pspp-tutorial-src.docx
 # 本地环境
 .env
 .env.local
+
+# 本地工作记忆（不纳入仓库）
+.workbuddy/

@@ -1,0 +1,25 @@
+:root {
+  --vp-font-family-base: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB",
+    "Source Han Sans SC", "Noto Sans CJK SC", system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+/* 中文排版下更紧凑、易读 */
+.vp-doc :not(pre) > code {
+  white-space: break-spaces;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+/* 供下载页 raw iframe 预览使用（与 PdfViewer 组件二选一） */
+.pdf-frame {
+  width: 100%;
+  height: 880px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+}

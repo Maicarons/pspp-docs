@@ -19,6 +19,7 @@ const tutorialSidebar = [
   { text: '第八章 图表制作', link: '/tutorial/08-第八章-图表制作' },
   { text: '附录', link: '/tutorial/09-附录' },
   { text: '📄 PDF 版教程', link: '/tutorial/pdf' },
+  { text: '📦 下载与资源', link: '/downloads' },
 ]
 
 export default defineConfig({
@@ -43,6 +44,7 @@ export default defineConfig({
       { text: 'English', link: '/manual-en/' },
       { text: '入门教程', link: '/tutorial/' },
       { text: 'PDF', link: '/tutorial/pdf' },
+      { text: '下载', link: '/downloads' },
     ],
 
     sidebar: {
