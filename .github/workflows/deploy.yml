@@ -5,14 +5,15 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# 允许 GITHUB_TOKEN 部署到 Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 同一时间只运行一个部署，不取消进行中的部署
+# 同一时间只允许一个部署，不取消进行中的运行
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
@@ -21,20 +22,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with VitePress
-        # 若仓库名不是 pspp-docs，请同步修改 docs/.vitepress/config.ts 中的 base，
-        # 或通过环境变量覆盖：VITEPRESS_BASE=/你的仓库名/
+      - name: Build VitePress site
         run: npm run docs:build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

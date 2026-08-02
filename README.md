@@ -56,42 +56,29 @@ python tools/transform_docs.py     # 复制/整理到 docs/
 python tools/generate_sidebar.py   # 由 index.md 重新生成侧边栏
 ```
 
-## 部署到 GitHub Pages（gh-pages 分支）
+## 部署到 GitHub Pages（GitHub Actions 自动部署）
 
-本仓库采用 **gh-pages 分支部署**：把构建产物直接推到 `gh-pages` 分支根目录，Pages 源设为该分支，
-无需 GitHub Actions 工作流（因此也不要求 token 具备 `workflow` scope）。
+本仓库采用 **GitHub Actions 自动部署**：每次向 `main` 分支推送，工作流
+`.github/workflows/deploy.yml` 会自动构建 VitePress 站点并把产物发布到 GitHub Pages，
+无需手动推送 `gh-pages` 分支（旧的分支式部署已弃用，该分支不再被读取）。
 
-仓库已初始化并提交在 `main` 分支，仓库名 `pspp-docs`，站点 `base` 为 `/pspp-docs/`。
+仓库名 `pspp-docs`，站点 `base` 为 `/pspp-docs/`，线上地址
+`https://<你的用户名>.github.io/pspp-docs/`。
 
 1. **（可选）修改 base**：若部署到别的仓库名，编辑 `docs/.vitepress/config.ts` 顶部的
    `base`，改为 `/你的仓库名/`（结尾斜杠不可省略）。
-2. **推送源码到 main**（首次）：
-
-   ```bash
-   git remote add origin https://github.com/<你的用户名>/pspp-docs.git
-   git push -u origin main
-   ```
-
-3. **构建并推送到 gh-pages**：
+2. **启用 Pages（一次性）**：仓库 `Settings → Pages → Build and deployment → Source`
+   选择 **GitHub Actions**。
+3. **自动部署**：推送到 `main` 即触发构建与发布；也可在仓库
+   `Actions → Deploy PSPP Docs to GitHub Pages → Run workflow` 手动触发。
+4. **本地预览**（不部署）：
 
    ```bash
    npm run docs:build
-   cd docs/.vitepress/dist
-   git init -b gh-pages
-   git add -A
-   git commit -m "deploy: gh-pages"
-   git push --force https://github.com/<你的用户名>/pspp-docs.git gh-pages
-   rm -rf .git
-   cd ../../..
+   npm run docs:preview   # 默认 http://localhost:4173
    ```
 
-4. **启用 Pages**：仓库 `Settings → Pages → Build and deployment → Source` 选择
-   **Deploy from a branch**，分支选 `gh-pages`、目录选 `/ (root)`，保存后访问
-   `https://<你的用户名>.github.io/pspp-docs/`。
-
-> 改用 GitHub Actions 自动部署：本仓库保留了示例工作流
-> `docs/.vitepress/deploy.workflow.example.yml`。若你的 token 具备 `workflow` scope，
-> 把它复制为 `.github/workflows/deploy.yml` 并推送即可改为自动部署。
+> 要求 `gh` / Git 使用的 token 具备 `workflow` scope（用于推送 `.github/workflows/*.yml`）。
 
 > 说明：本仓库的 `_source/` 目录与 `tools/pspp-tutorial-src.docx` 已被 `.gitignore` 忽略，
 > 不会推送到远程；如需把原始源文档也纳入版本管理，可从 `.gitignore` 中移除 `_source/`。
