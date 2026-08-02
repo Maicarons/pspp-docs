@@ -1,9 +1,8 @@
 <script setup>
-import { useData } from 'vitepress'
-
 // 自动拼接 base，兼容 GitHub Pages 项目站点
-const { site } = useData()
-const base = site.base
+// 用 import.meta.env.BASE_URL（VitePress 构建期注入的站点 base，如 /pspp-docs/）
+// 不要用 useData().site.base —— 那是 Ref，直接取 .base 会得到 undefined
+const base = import.meta.env.BASE_URL || '/'
 
 // 三个可下载资源（路径相对于站点根目录）
 const files = [
