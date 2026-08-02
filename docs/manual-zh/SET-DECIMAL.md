@@ -1,0 +1,3 @@
+# SET DECIMAL (PSPP)
+
+您要查找的节点位于 [SET DECIMAL](SET.md#SET-DECIMAL)。

@@ -1,0 +1,3 @@
+# SET SCALEMIN (PSPP)
+
+您要查找的节点位于 [SET SCALEMIN](SET.md#SET-SCALEMIN)。

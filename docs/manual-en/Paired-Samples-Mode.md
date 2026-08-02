@@ -1,0 +1,3 @@
+#### 15.13.3 Paired Samples Mode
+
+The `PAIRS` subcommand introduces Paired Samples mode. Use this mode when repeated measures have been taken from the same samples. If the `WITH` keyword is omitted, then tables for all combinations of variables given in the `PAIRS` subcommand are generated. If the `WITH` keyword is given, and the `(PAIRED)` keyword is also given, then the number of variables preceding `WITH` must be the same as the number following it. In this case, tables for each respective pair of variables are generated. In the event that the `WITH` keyword is given, but the `(PAIRED)` keyword is omitted, then tables for each combination of variable preceding `WITH` against variable following `WITH` are generated.

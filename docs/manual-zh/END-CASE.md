@@ -1,0 +1,5 @@
+### 8.6 END CASE
+
+    END CASE.
+
+`END CASE` 仅用于 `INPUT PROGRAM` 内部，用于输出当前个案。详见 [INPUT PROGRAM](INPUT-PROGRAM.md)。

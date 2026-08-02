@@ -1,0 +1,7 @@
+### 17.7 DISPLAY FILE LABEL
+
+    DISPLAY FILE LABEL.
+
+`DISPLAY FILE LABEL` 显示活动数据集中包含的文件标签（如果有）。参见 [FILE LABEL](FILE-LABEL.md)。
+
+此命令是 PSPP 扩展。

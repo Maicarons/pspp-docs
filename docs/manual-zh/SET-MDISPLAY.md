@@ -1,0 +1,3 @@
+# SET MDISPLAY (PSPP)
+
+您要查找的节点位于 [SET MDISPLAY](SET.md#SET-MDISPLAY)。

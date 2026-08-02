@@ -1,0 +1,3 @@
+# SET TVARS (PSPP)
+
+您要查找的节点位于 [SET TVARS](SET.md#SET-TVARS)。

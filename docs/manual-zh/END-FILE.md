@@ -1,0 +1,5 @@
+### 8.7 END FILE
+
+    END FILE.
+
+`END FILE` 仅用于 `INPUT PROGRAM` 内部，用于终止当前的输入程序。参见 [INPUT PROGRAM](INPUT-PROGRAM.md)。
