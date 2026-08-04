@@ -31,6 +31,15 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
 
+  // 站点含 840+ 页面与本地搜索索引（约 1.4MB，作为异步 chunk 懒加载，
+  // 不影响首屏）。VitePress 只读取顶层 `vite` 字段作为 Vite 配置，
+  // 故 build 选项须置于 vite 下；提高阈值以消除良性体积告警。
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 2000,
+    },
+  },
+
   // 关闭 markdown-it-attrs：手册中大量矩阵示例含花括号（如 {10; 20}），
   // 否则会被当成属性语法 {attr} 而破坏表格/正文。
   // 注意：html 必须保持 true，否则 <PdfViewer/>、<ResourceLinks/> 等
@@ -62,6 +71,11 @@ export default defineConfig({
 
     search: {
       provider: 'local',
+      options: {
+        // 详细结果面板，便于在 840+ 页中快速定位
+        detailedView: true,
+        placeholder: '搜索文档（支持中英文）',
+      },
     },
 
     footer: {
