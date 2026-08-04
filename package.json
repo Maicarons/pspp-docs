@@ -6,7 +6,7 @@
   "description": "GNU PSPP 文档中心：中文/英文参考手册 + 中文入门教程（VitePress + GitHub Pages）",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs && node tools/fix-leaf-html.mjs",
     "docs:preview": "vitepress preview docs",
     "transform": "python tools/transform_docs.py",
     "sidebar": "python tools/generate_sidebar.py"
